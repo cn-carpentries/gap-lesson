@@ -97,8 +97,8 @@ permalink: /discuss/
     interested only in normal or maximal subgroups - there are special
     methods to compute them.
 
-  - If you are looking for *p*\-subgroups, first you may calculate
-    a Sylow *p*\-subgroup of a group, and then look at its subgroups
+  - If you are looking for _p_\-subgroups, first you may calculate
+    a Sylow _p_\-subgroup of a group, and then look at its subgroups
     and their conjugates.
 
   - Representation matters: it may be worth to convert a group from fp group
