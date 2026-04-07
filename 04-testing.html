@@ -21,8 +21,7 @@
         <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Programming with GAP
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 43%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 43%" class="percentage">
     43%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 43%" aria-valuenow="43" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="43" style="width: 43%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="instructor/04-testing.html">Instructor View</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -256,14 +246,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="key-points.html">Key Points</a>
@@ -293,7 +283,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-func.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="05-small-groups.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -377,13 +367,13 @@ full path) with the following content:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>#<span class="co"> tests for average order of a group element</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>#<span class="co"> permutation group</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">9</span>)<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="va">Sym</span>( [ <span class="fl">1</span> <span class="op">..</span> <span class="fl">9</span> ] )</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fl">3291487</span><span class="op">/</span><span class="fl">362880</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a>#<span class="co"> tests for average order of a group element</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>#<span class="co"> permutation group</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">9</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="va">Sym</span>( [ <span class="fl">1</span> <span class="op">..</span> <span class="fl">9</span> ] )</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="fl">3291487</span><span class="op">/</span><span class="fl">362880</span></span></code></pre>
 </div>
 <p>As you see, the test file may include comments, with certain rules
 specifying where they may be placed, because one should be able to
@@ -400,7 +390,7 @@ already loaded):</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -420,47 +410,47 @@ show various ways of combining commands in the test file:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>#<span class="co"> tests for average order of a group element</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>#<span class="co"> permutation group</span></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">9</span>)<span class="op">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="va">Sym</span>( [ <span class="fl">1</span> <span class="op">..</span> <span class="fl">9</span> ] )</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="fl">3291487</span><span class="op">/</span><span class="fl">362880</span></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>#<span class="co"> pc group</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">D</span><span class="op">:=</span><span class="bu">DihedralGroup</span>(<span class="fl">512</span>)<span class="op">;</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="op">&lt;</span><span class="va">pc</span> <span class="va">group</span> <span class="va">of</span> <span class="va">size</span> <span class="fl">512</span> <span class="va">with</span> <span class="fl">9</span> <span class="va">generators</span><span class="op">&gt;</span></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">D</span>)<span class="op">;</span></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="fl">44203</span><span class="op">/</span><span class="fl">512</span></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">G</span><span class="op">:=</span><span class="bu">TrivialGroup</span>()<span class="op">;;</span> #<span class="co"> suppress output</span></span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="fl">1</span></span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>#<span class="co"> fp group</span></span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">F</span><span class="op">:=</span><span class="bu">FreeGroup</span>(<span class="st">"a"</span><span class="op">,</span><span class="st">"b"</span>)<span class="op">;</span></span>
-<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a><span class="op">&lt;</span><span class="va">free</span> <span class="va">group</span> <span class="va">on</span> <span class="va">the</span> <span class="va">generators</span> [ <span class="va">a</span><span class="op">,</span> <span class="va">b</span> ]<span class="op">&gt;</span></span>
-<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">G</span><span class="op">:=</span><span class="va">F</span><span class="op">/</span><span class="va">ParseRelators</span>(<span class="bu">GeneratorsOfGroup</span>(<span class="va">F</span>)<span class="op">,</span><span class="st">"a^8=b^2=1, b^-1ab=a^-1"</span>)<span class="op">;</span></span>
-<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a><span class="op">&lt;</span><span class="va">fp</span> <span class="va">group</span> <span class="va">on</span> <span class="va">the</span> <span class="va">generators</span> [ <span class="va">a</span><span class="op">,</span> <span class="va">b</span> ]<span class="op">&gt;</span></span>
-<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">IsFinite</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="cn">true</span></span>
-<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a><span class="fl">59</span><span class="op">/</span><span class="fl">16</span></span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a></span>
-<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a>#<span class="co"> finite matrix group over integers</span></span>
-<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>( <span class="bu">Group</span>( [[<span class="fl">0</span><span class="op">,-</span><span class="fl">1</span>]<span class="op">,</span>[<span class="fl">1</span><span class="op">,</span><span class="fl">0</span>]] ) )<span class="op">;</span></span>
-<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a><span class="fl">11</span><span class="op">/</span><span class="fl">4</span></span>
-<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a>#<span class="co"> matrix group over a finite field</span></span>
-<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">SL</span>(<span class="fl">2</span><span class="op">,</span><span class="fl">5</span>))<span class="op">;</span></span>
-<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a><span class="fl">221</span><span class="op">/</span><span class="fl">40</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a>#<span class="co"> tests for average order of a group element</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>#<span class="co"> permutation group</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">9</span>)<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="va">Sym</span>( [ <span class="fl">1</span> <span class="op">..</span> <span class="fl">9</span> ] )</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="fl">3291487</span><span class="op">/</span><span class="fl">362880</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a>#<span class="co"> pc group</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">D</span><span class="op">:=</span><span class="bu">DihedralGroup</span>(<span class="fl">512</span>)<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="op">&lt;</span><span class="va">pc</span> <span class="va">group</span> <span class="va">of</span> <span class="va">size</span> <span class="fl">512</span> <span class="va">with</span> <span class="fl">9</span> <span class="va">generators</span><span class="op">&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">D</span>)<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a><span class="fl">44203</span><span class="op">/</span><span class="fl">512</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">G</span><span class="op">:=</span><span class="bu">TrivialGroup</span>()<span class="op">;;</span> #<span class="co"> suppress output</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a><span class="fl">1</span></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1" aria-label="code-block-4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1" aria-label="code-block-4-18"></a>#<span class="co"> fp group</span></span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1" aria-label="code-block-4-19"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">F</span><span class="op">:=</span><span class="bu">FreeGroup</span>(<span class="st">"a"</span><span class="op">,</span><span class="st">"b"</span>)<span class="op">;</span></span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1" aria-label="code-block-4-20"></a><span class="op">&lt;</span><span class="va">free</span> <span class="va">group</span> <span class="va">on</span> <span class="va">the</span> <span class="va">generators</span> [ <span class="va">a</span><span class="op">,</span> <span class="va">b</span> ]<span class="op">&gt;</span></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1" aria-label="code-block-4-21"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">G</span><span class="op">:=</span><span class="va">F</span><span class="op">/</span><span class="va">ParseRelators</span>(<span class="bu">GeneratorsOfGroup</span>(<span class="va">F</span>)<span class="op">,</span><span class="st">"a^8=b^2=1, b^-1ab=a^-1"</span>)<span class="op">;</span></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1" aria-label="code-block-4-22"></a><span class="op">&lt;</span><span class="va">fp</span> <span class="va">group</span> <span class="va">on</span> <span class="va">the</span> <span class="va">generators</span> [ <span class="va">a</span><span class="op">,</span> <span class="va">b</span> ]<span class="op">&gt;</span></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1" aria-label="code-block-4-23"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">IsFinite</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1" aria-label="code-block-4-24"></a><span class="cn">true</span></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1" aria-label="code-block-4-25"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1" aria-label="code-block-4-26"></a><span class="fl">59</span><span class="op">/</span><span class="fl">16</span></span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1" aria-label="code-block-4-27"></a></span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1" aria-label="code-block-4-28"></a>#<span class="co"> finite matrix group over integers</span></span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1" aria-label="code-block-4-29"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>( <span class="bu">Group</span>( [[<span class="fl">0</span><span class="op">,-</span><span class="fl">1</span>]<span class="op">,</span>[<span class="fl">1</span><span class="op">,</span><span class="fl">0</span>]] ) )<span class="op">;</span></span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1" aria-label="code-block-4-30"></a><span class="fl">11</span><span class="op">/</span><span class="fl">4</span></span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1" aria-label="code-block-4-31"></a></span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1" aria-label="code-block-4-32"></a>#<span class="co"> matrix group over a finite field</span></span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1" aria-label="code-block-4-33"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">SL</span>(<span class="fl">2</span><span class="op">,</span><span class="fl">5</span>))<span class="op">;</span></span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1" aria-label="code-block-4-34"></a><span class="fl">221</span><span class="op">/</span><span class="fl">40</span></span></code></pre>
 </div>
 <p>Let us test the extended version of the test again and check that it
 works:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -476,22 +466,22 @@ their representatives. The following code, which we add into
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">local</span> <span class="va">cc</span><span class="op">,</span> <span class="va">sum</span><span class="op">,</span> <span class="va">c</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="va">cc</span><span class="op">:=</span><span class="bu">ConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="cf">for</span> <span class="va">c</span> <span class="ex">in</span> <span class="va">cc</span> <span class="cf">do</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>( <span class="bu">Representative</span>(<span class="va">c</span>) ) <span class="op">*</span> <span class="bu">Size</span>(<span class="va">cc</span>)<span class="op">;</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="ex">local</span> <span class="va">cc</span><span class="op">,</span> <span class="va">sum</span><span class="op">,</span> <span class="va">c</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="va">cc</span><span class="op">:=</span><span class="bu">ConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a><span class="cf">for</span> <span class="va">c</span> <span class="ex">in</span> <span class="va">cc</span> <span class="cf">do</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>( <span class="bu">Representative</span>(<span class="va">c</span>) ) <span class="op">*</span> <span class="bu">Size</span>(<span class="va">cc</span>)<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <p>but when we run the test, here comes a surprise!</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -536,23 +526,23 @@ course should look as follows:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="ex">local</span> <span class="va">cc</span><span class="op">,</span> <span class="va">sum</span><span class="op">,</span> <span class="va">c</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="va">cc</span><span class="op">:=</span><span class="bu">ConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="cf">for</span> <span class="va">c</span> <span class="ex">in</span> <span class="va">cc</span> <span class="cf">do</span></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>( <span class="bu">Representative</span>(<span class="va">c</span>) ) <span class="op">*</span> <span class="bu">Size</span>(<span class="va">c</span>)<span class="op">;</span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="ex">local</span> <span class="va">cc</span><span class="op">,</span> <span class="va">sum</span><span class="op">,</span> <span class="va">c</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="va">cc</span><span class="op">:=</span><span class="bu">ConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a><span class="cf">for</span> <span class="va">c</span> <span class="ex">in</span> <span class="va">cc</span> <span class="cf">do</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>( <span class="bu">Representative</span>(<span class="va">c</span>) ) <span class="op">*</span> <span class="bu">Size</span>(<span class="va">c</span>)<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <p>Now we will fix this in <code>avgord.g</code>, and read and test it
 again to check that the tests run correctly.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="va">Test</span>(<span class="st">"avgord.tst"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -580,7 +570,7 @@ effort.</li>
 
 
       </div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-func.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="05-small-groups.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -640,7 +630,7 @@ effort.</li>
   "identifier": "https://carpentries-incubator.github.io/gap-lesson/04-testing.html",
   "dateCreated": "2014-10-21",
   "dateModified": "2025-06-26",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

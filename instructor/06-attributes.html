@@ -21,8 +21,7 @@
         <img id="incubator-logo" alt="Lesson Description" src="../assets/images/incubator-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Programming with GAP
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 81%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 81%" class="percentage">
     81%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 81%" aria-valuenow="81" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="81" style="width: 81%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../06-attributes.html">Learner View</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -256,14 +246,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="../instructor/key-points.html">Key Points</a>
@@ -293,7 +283,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/05-small-groups.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -371,7 +361,7 @@ slightly varying runtime:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="va">A</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="va">A</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -381,7 +371,7 @@ slightly varying runtime:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="va">AvgOrdOfCollection</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AvgOrdOfCollection</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="va">AvgOrdOfCollection</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AvgOrdOfCollection</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -404,8 +394,8 @@ Consider the following example:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="va">G</span><span class="op">:=</span><span class="bu">Group</span>([ (<span class="fl">1</span><span class="op">,</span><span class="fl">2</span><span class="op">,</span><span class="fl">3</span><span class="op">,</span><span class="fl">4</span><span class="op">,</span><span class="fl">5</span><span class="op">,</span><span class="fl">6</span><span class="op">,</span><span class="fl">7</span><span class="op">,</span><span class="fl">8</span><span class="op">,</span><span class="fl">9</span><span class="op">,</span><span class="fl">10</span><span class="op">,</span><span class="fl">11</span>)<span class="op">,</span> (<span class="fl">3</span><span class="op">,</span><span class="fl">7</span><span class="op">,</span><span class="fl">11</span><span class="op">,</span><span class="fl">8</span>)(<span class="fl">4</span><span class="op">,</span><span class="fl">10</span><span class="op">,</span><span class="fl">5</span><span class="op">,</span><span class="fl">6</span>) ])<span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">NrConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span><span class="va">time</span><span class="op">;</span><span class="bu">NrConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="va">G</span><span class="op">:=</span><span class="bu">Group</span>([ (<span class="fl">1</span><span class="op">,</span><span class="fl">2</span><span class="op">,</span><span class="fl">3</span><span class="op">,</span><span class="fl">4</span><span class="op">,</span><span class="fl">5</span><span class="op">,</span><span class="fl">6</span><span class="op">,</span><span class="fl">7</span><span class="op">,</span><span class="fl">8</span><span class="op">,</span><span class="fl">9</span><span class="op">,</span><span class="fl">10</span><span class="op">,</span><span class="fl">11</span>)<span class="op">,</span> (<span class="fl">3</span><span class="op">,</span><span class="fl">7</span><span class="op">,</span><span class="fl">11</span><span class="op">,</span><span class="fl">8</span>)(<span class="fl">4</span><span class="op">,</span><span class="fl">10</span><span class="op">,</span><span class="fl">5</span><span class="op">,</span><span class="fl">6</span>) ])<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">NrConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span><span class="va">time</span><span class="op">;</span><span class="bu">NrConjugacyClasses</span>(<span class="va">G</span>)<span class="op">;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -423,7 +413,7 @@ zero cost since the result was stored in <code>G</code>, since
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">NrConjugacyClasses</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="bu">NrConjugacyClasses</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -437,8 +427,8 @@ attribute is as follows:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="va">AverageOrder</span> <span class="op">:=</span> <span class="bu">NewAttribute</span>(<span class="st">"AverageOrder"</span><span class="op">,</span> <span class="bu">IsCollection</span>)<span class="op">;</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="bu">InstallMethod</span>( <span class="va">AverageOrder</span><span class="op">,</span> <span class="st">"for a collection"</span><span class="op">,</span> [<span class="bu">IsCollection</span>]<span class="op">,</span> <span class="va">AvgOrdOfCollection</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="va">AverageOrder</span> <span class="op">:=</span> <span class="bu">NewAttribute</span>(<span class="st">"AverageOrder"</span><span class="op">,</span> <span class="bu">IsCollection</span>)<span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="bu">InstallMethod</span>( <span class="va">AverageOrder</span><span class="op">,</span> <span class="st">"for a collection"</span><span class="op">,</span> [<span class="bu">IsCollection</span>]<span class="op">,</span> <span class="va">AvgOrdOfCollection</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>In this example, first we declared an attribute
 <code>AverageOrder</code> for objects in the category
@@ -452,7 +442,7 @@ time is reduced from more than 16 seconds to zero:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -481,7 +471,7 @@ based on the type of all arguments.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">InstallMethod</span>( <span class="va">AverageOrder</span><span class="op">,</span> [<span class="bu">IsGroup</span>]<span class="op">,</span> <span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="bu">InstallMethod</span>( <span class="va">AverageOrder</span><span class="op">,</span> [<span class="bu">IsGroup</span>]<span class="op">,</span> <span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>If you apply it to a group whose <code>AverageOrder</code> has
 already been computed, nothing will happen, since GAP will use the
@@ -490,7 +480,7 @@ be called:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span> <span class="va">AverageOrder</span>(<span class="va">S</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -524,7 +514,7 @@ using <code>NewProperty</code></p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="va">IsIntegerAverageOrder</span> <span class="op">:=</span> <span class="bu">NewProperty</span>(<span class="st">"IsIntegerAverageOrder"</span><span class="op">,</span> <span class="bu">IsCollection</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="va">IsIntegerAverageOrder</span> <span class="op">:=</span> <span class="bu">NewProperty</span>(<span class="st">"IsIntegerAverageOrder"</span><span class="op">,</span> <span class="bu">IsCollection</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>Now we will install a method for <code>IsIntegerAverageOrder</code>
 for a collection. Observe that it is never necessary to create a
@@ -533,11 +523,11 @@ installation instead creates a new function as one of its arguments:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="bu">InstallMethod</span>( <span class="va">IsIntegerAverageOrder</span><span class="op">,</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>  <span class="st">"for a collection"</span><span class="op">,</span></span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  [<span class="bu">IsCollection</span>]<span class="op">,</span></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  <span class="va">coll</span> <span class="op">-&gt;</span> <span class="bu">IsInt</span>( <span class="va">AverageOrder</span>( <span class="va">coll</span> ) )</span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="bu">InstallMethod</span>( <span class="va">IsIntegerAverageOrder</span><span class="op">,</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a>  <span class="st">"for a collection"</span><span class="op">,</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a>  [<span class="bu">IsCollection</span>]<span class="op">,</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a>  <span class="va">coll</span> <span class="op">-&gt;</span> <span class="bu">IsInt</span>( <span class="va">AverageOrder</span>( <span class="va">coll</span> ) )</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a>)<span class="op">;</span></span></code></pre>
 </div>
 <p>Note that because <code>AverageOrder</code> is an attribute it will
 take care of the selection of the most suitable method.</p>
@@ -564,7 +554,7 @@ conjugacy classes:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="va">l</span><span class="op">:=</span><span class="bu">List</span>([<span class="fl">1</span><span class="op">..</span><span class="fl">1000</span>]<span class="op">,</span><span class="va">i</span><span class="op">-&gt;</span><span class="bu">SmallGroup</span>(<span class="fl">1536</span><span class="op">,</span><span class="va">i</span>))<span class="op">;;</span> <span class="bu">List</span>(<span class="va">l</span><span class="op">,</span><span class="va">AvgOrdOfGroup</span>)<span class="op">;;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="va">l</span><span class="op">:=</span><span class="bu">List</span>([<span class="fl">1</span><span class="op">..</span><span class="fl">1000</span>]<span class="op">,</span><span class="va">i</span><span class="op">-&gt;</span><span class="bu">SmallGroup</span>(<span class="fl">1536</span><span class="op">,</span><span class="va">i</span>))<span class="op">;;</span> <span class="bu">List</span>(<span class="va">l</span><span class="op">,</span><span class="va">AvgOrdOfGroup</span>)<span class="op">;;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -574,7 +564,7 @@ conjugacy classes:</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="va">l</span><span class="op">:=</span><span class="bu">List</span>([<span class="fl">1</span><span class="op">..</span><span class="fl">1000</span>]<span class="op">,</span><span class="va">i</span><span class="op">-&gt;</span><span class="bu">SmallGroup</span>(<span class="fl">1536</span><span class="op">,</span><span class="va">i</span>))<span class="op">;;</span> <span class="bu">List</span>(<span class="va">l</span><span class="op">,</span><span class="va">AvgOrdOfCollection</span>)<span class="op">;;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="va">l</span><span class="op">:=</span><span class="bu">List</span>([<span class="fl">1</span><span class="op">..</span><span class="fl">1000</span>]<span class="op">,</span><span class="va">i</span><span class="op">-&gt;</span><span class="bu">SmallGroup</span>(<span class="fl">1536</span><span class="op">,</span><span class="va">i</span>))<span class="op">;;</span> <span class="bu">List</span>(<span class="va">l</span><span class="op">,</span><span class="va">AvgOrdOfCollection</span>)<span class="op">;;</span><span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -623,7 +613,7 @@ tools helping to understand it.</li>
 
 
       </div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/05-small-groups.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -683,7 +673,7 @@ tools helping to understand it.</li>
   "identifier": "https://carpentries-incubator.github.io/gap-lesson/instructor/06-attributes.html",
   "dateCreated": "2014-10-21",
   "dateModified": "2025-06-26",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

@@ -21,8 +21,7 @@
         <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Programming with GAP
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 22%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 22%" class="percentage">
     22%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 22%" aria-valuenow="22" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="22" style="width: 22%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="instructor/03-func.html">Instructor View</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -256,14 +246,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="key-points.html">Key Points</a>
@@ -293,7 +283,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="02-some-objects.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="04-testing.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -354,7 +344,7 @@ elements of the group in question:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">SymmetricGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -364,7 +354,7 @@ elements of the group in question:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -374,10 +364,10 @@ elements of the group in question:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -391,7 +381,7 @@ suppress the output of <code>sum</code>:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;;</span> <span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span> <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span> <span class="cf">od</span><span class="op">;</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;;</span> <span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span> <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span> <span class="cf">od</span><span class="op">;</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -406,7 +396,7 @@ we need to edit the code:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="va">S</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -416,7 +406,7 @@ we need to edit the code:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;;</span> <span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span> <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span> <span class="cf">od</span><span class="op">;</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">0</span><span class="op">;;</span> <span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">do</span> <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span> <span class="cf">od</span><span class="op">;</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">S</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -459,14 +449,14 @@ the average order of its elements:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1" aria-label="code-block-13-8"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -478,7 +468,7 @@ argument:</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="va">A</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="va">A</span><span class="op">:=</span><span class="bu">AlternatingGroup</span>(<span class="fl">10</span>)<span class="op">;</span> <span class="va">AvgOrdOfGroup</span>(<span class="va">A</span>)<span class="op">;</span> <span class="va">time</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -501,29 +491,29 @@ comments (a good chance to practise using them!):</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>#<span class="co">####################################################################</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>#</span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>#<span class="co"> AvgOrdOfGroup(G)</span></span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>#</span>
-<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>#<span class="co"> Calculating the average order of an element of G, where G meant to</span></span>
-<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>#<span class="co"> be a group but in fact may be any collection of objects having</span></span>
-<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>#<span class="co"> multiplicative order</span></span>
-<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>#</span>
-<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
-<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
-<span id="cb17-12"><a href="#cb17-12" tabindex="-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
-<span id="cb17-13"><a href="#cb17-13" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
-<span id="cb17-14"><a href="#cb17-14" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb17-15"><a href="#cb17-15" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb17-16"><a href="#cb17-16" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a>#<span class="co">####################################################################</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a>#</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a>#<span class="co"> AvgOrdOfGroup(G)</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a>#</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a>#<span class="co"> Calculating the average order of an element of G, where G meant to</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a>#<span class="co"> be a group but in fact may be any collection of objects having</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a>#<span class="co"> multiplicative order</span></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1" aria-label="code-block-17-8"></a>#</span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1" aria-label="code-block-17-9"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1" aria-label="code-block-17-11"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
+<span id="cb17-13"><a href="#cb17-13" tabindex="-1" aria-label="code-block-17-13"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
+<span id="cb17-14"><a href="#cb17-14" tabindex="-1" aria-label="code-block-17-14"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb17-15"><a href="#cb17-15" tabindex="-1" aria-label="code-block-17-15"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb17-16"><a href="#cb17-16" tabindex="-1" aria-label="code-block-17-16"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <p>Now start a new GAP session and create another group, for example
 <code>MathieuGroup(11)</code>:</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="va">M11</span><span class="op">:=</span><span class="bu">MathieuGroup</span>(<span class="fl">11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="va">M11</span><span class="op">:=</span><span class="bu">MathieuGroup</span>(<span class="fl">11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -535,7 +525,7 @@ so an attempt to call this function results in an error:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -549,14 +539,14 @@ directory, so no path is needed.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>This loads the file into GAP, and the function
 <code>AvgOrdOfGroup</code> is now available:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -577,19 +567,19 @@ warnings!</strong></p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>by the line with a deliberate syntax error:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">return</span> <span class="va">Float</span>(<span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a><span class="ex">return</span> <span class="va">Float</span>(<span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>Now read this file with</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb27-1"><a href="#cb27-1" tabindex="-1" aria-label="code-block-27-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <p>and you will see an error message:</p>
 <div class="codewrapper">
@@ -605,7 +595,7 @@ successfully read:</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="bu">Print</span>(<span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb29-1"><a href="#cb29-1" tabindex="-1" aria-label="code-block-29-1"></a><span class="bu">Print</span>(<span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -623,8 +613,8 @@ file again and recalculate the average order of an element for
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb31-1"><a href="#cb31-1" tabindex="-1" aria-label="code-block-31-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1" aria-label="code-block-31-2"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -639,20 +629,20 @@ instead of a float), and then comment out two lines as follows:</p>
 <div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>#<span class="co"> local sum, g;</span></span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>#<span class="co"> sum := 0;</span></span>
-<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
-<span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
-<span id="cb33-6"><a href="#cb33-6" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb33-7"><a href="#cb33-7" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb33-8"><a href="#cb33-8" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb33-1"><a href="#cb33-1" tabindex="-1" aria-label="code-block-33-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1" aria-label="code-block-33-2"></a>#<span class="co"> local sum, g;</span></span>
+<span id="cb33-3"><a href="#cb33-3" tabindex="-1" aria-label="code-block-33-3"></a>#<span class="co"> sum := 0;</span></span>
+<span id="cb33-4"><a href="#cb33-4" tabindex="-1" aria-label="code-block-33-4"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
+<span id="cb33-5"><a href="#cb33-5" tabindex="-1" aria-label="code-block-33-5"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
+<span id="cb33-6"><a href="#cb33-6" tabindex="-1" aria-label="code-block-33-6"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb33-7"><a href="#cb33-7" tabindex="-1" aria-label="code-block-33-7"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb33-8"><a href="#cb33-8" tabindex="-1" aria-label="code-block-33-8"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <p>Now, when you read the file, you will see warnings:</p>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb34-1"><a href="#cb34-1" tabindex="-1" aria-label="code-block-34-1"></a><span class="bu">Read</span>(<span class="st">"avgord.g"</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -684,7 +674,7 @@ display any comments):</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="bu">Print</span>(<span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb36-1"><a href="#cb36-1" tabindex="-1" aria-label="code-block-36-1"></a><span class="bu">Print</span>(<span class="va">AvgOrdOfGroup</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -700,7 +690,7 @@ end</code></pre>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb38-1"><a href="#cb38-1" tabindex="-1" aria-label="code-block-38-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -717,7 +707,7 @@ brk&gt;</code></pre>
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">2</span><span class="op">^</span><span class="fl">64</span><span class="op">;</span> <span class="va">g</span><span class="op">:=</span>[<span class="fl">1</span>]<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb40-1"><a href="#cb40-1" tabindex="-1" aria-label="code-block-40-1"></a><span class="va">sum</span><span class="op">:=</span><span class="fl">2</span><span class="op">^</span><span class="fl">64</span><span class="op">;</span> <span class="va">g</span><span class="op">:=</span>[<span class="fl">1</span>]<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -728,7 +718,7 @@ brk&gt;</code></pre>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb42-1"><a href="#cb42-1" tabindex="-1" aria-label="code-block-42-1"></a><span class="va">AvgOrdOfGroup</span>(<span class="va">M11</span>)<span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -738,7 +728,7 @@ brk&gt;</code></pre>
 <div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="va">sum</span><span class="op">;</span> <span class="va">g</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb44-1"><a href="#cb44-1" tabindex="-1" aria-label="code-block-44-1"></a><span class="va">sum</span><span class="op">;</span> <span class="va">g</span><span class="op">;</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -753,14 +743,14 @@ initial version of <code>AvgOrdOfGroup</code> in the file
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">GAP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
-<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
-<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
-<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
-<span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
-<span id="cb46-6"><a href="#cb46-6" tabindex="-1"></a><span class="cf">od</span><span class="op">;</span></span>
-<span id="cb46-7"><a href="#cb46-7" tabindex="-1"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
-<span id="cb46-8"><a href="#cb46-8" tabindex="-1"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
+<pre class="sourceCode gap" tabindex="0"><code class="sourceCode gap"><span id="cb46-1"><a href="#cb46-1" tabindex="-1" aria-label="code-block-46-1"></a><span class="va">AvgOrdOfGroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">G</span>)</span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1" aria-label="code-block-46-2"></a><span class="ex">local</span> <span class="va">sum</span><span class="op">,</span> <span class="va">g</span><span class="op">;</span></span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1" aria-label="code-block-46-3"></a><span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb46-4"><a href="#cb46-4" tabindex="-1" aria-label="code-block-46-4"></a><span class="cf">for</span> <span class="va">g</span> <span class="ex">in</span> <span class="va">G</span> <span class="cf">do</span></span>
+<span id="cb46-5"><a href="#cb46-5" tabindex="-1" aria-label="code-block-46-5"></a>  <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="bu">Order</span>(<span class="va">g</span>)<span class="op">;</span></span>
+<span id="cb46-6"><a href="#cb46-6" tabindex="-1" aria-label="code-block-46-6"></a><span class="cf">od</span><span class="op">;</span></span>
+<span id="cb46-7"><a href="#cb46-7" tabindex="-1" aria-label="code-block-46-7"></a><span class="ex">return</span> <span class="va">sum</span><span class="op">/</span><span class="bu">Size</span>(<span class="va">G</span>)<span class="op">;</span></span>
+<span id="cb46-8"><a href="#cb46-8" tabindex="-1" aria-label="code-block-46-8"></a><span class="fu">end</span><span class="op">;</span></span></code></pre>
 </div>
 <div id="paths" class="callout">
 <div class="callout-square">
@@ -797,7 +787,7 @@ to your future self and to others.</li>
 
 
       </div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="02-some-objects.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="04-testing.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -857,7 +847,7 @@ to your future self and to others.</li>
   "identifier": "https://carpentries-incubator.github.io/gap-lesson/03-func.html",
   "dateCreated": "2014-10-21",
   "dateModified": "2025-06-26",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>
